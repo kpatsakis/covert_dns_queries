@@ -1,0 +1,18 @@
+\documentclass{standalone}
+
+\usepackage{pgfplots, pgfplotstable}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+            enlarge y limits=true,xticklabels={,,},
+            grid = major,
+            grid style={dashed, gray!30},
+            ylabel=Package length in bytes,
+         ]
+        \addplot[only marks,mark=o,mark size=.3,blue] table [col sep = comma] {changeme.csv};
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}
